@@ -36,13 +36,29 @@ window.addEventListener("load", function () {
     function add_element(list, table, batiment, salle, reservation) {
         var body = document.createElement("tbody");
         var tr = document.createElement("tr");
-
-
-        tr.innerHTML = "<td>" + batiment + "</td> <td>" + salle + "</td> <td>" + reservation + "</td>" + "<td id=\"supp_element_td\"><button id=\"supp_element\" type=\"button\" class=\"btn btn-danger\"><b>X</b></button></td>";
+        var td_btn = document.createElement("td");
+        var button = document.createElement("button");
+        var txt_btn = document.createTextNode("X");
         
-        tr.addEventListener("click", function(){
+        td_btn.setAttribute("id", "supp_element_td");
+        
+        button.setAttribute("id", "supp_element");
+        button.setAttribute("type", "button");
+        button.setAttribute("class", "btn btn-danger");
+        
+        button.addEventListener("click", function(){
             body.removeChild(tr);
         });
+        
+        button.appendChild(txt_btn);
+        td_btn.appendChild(button);
+        
+        tr.innerHTML = "<td>" + batiment + "</td> <td>" + salle + "</td> <td>" + reservation + "</td>";
+        
+        tr.appendChild(td_btn);
+        
+        
+        
 
         body.appendChild(tr);
         table.appendChild(body);
