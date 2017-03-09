@@ -22,7 +22,7 @@ window.addEventListener("load", function () {
         
         danger.appendChild(span1);
         danger.appendChild(span2);
-        danger.appendChild(document.createTextNode("Veuillez remplir tous les champs avant d'ajouter une salles !"));
+        danger.appendChild(document.createTextNode(" Veuillez remplir tous les champs avant d'ajouter une salles !"));
         table.setAttribute("class", "table");
 
         list_creation(list, table);
