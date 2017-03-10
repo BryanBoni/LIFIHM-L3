@@ -17,7 +17,7 @@
     -moz-box-shadow: inset 0 1px 0 rgba( 255, 255, 255, .15 ), 0 0 1.25em rgba( 0, 0, 0, .5 ); /* 20 */
     box-shadow: inset 0 1px 0 rgba( 255, 255, 255, .15 ), 0 0 1.25em rgba( 0, 0, 0, .5 ); /* 20 */
     margin-bottom: 200px;
-    
+
 }
 
 #footer{
@@ -31,6 +31,13 @@
     color: white;
 }
 
+h1{
+    text-align: center;
+}
+
+#list{
+    overflow: auto;
+}
 
 #list td,th{
 
@@ -68,4 +75,18 @@ body{
 
 #input button{
     width:100%;
+
+}
+
+
+#formulaire_style{
+    /*border: 1px solid black;*/
+    border-radius: 10px;
+    padding: 20px;
+    /*background-color: #626262;*/
+    -webkit-box-shadow: inset 0 1px 0 rgba( 255, 255, 255, .15 ), 0 0 1.25em rgba( 0, 0, 0, .5 ); /* 20 */
+    -moz-box-shadow: inset 0 1px 0 rgba( 255, 255, 255, .15 ), 0 0 1.25em rgba( 0, 0, 0, .5 ); /* 20 */
+    box-shadow: inset 0 1px 0 rgba( 255, 255, 255, .15 ), 0 0 1.25em rgba( 0, 0, 0, .5 ); /* 20 */
+
+
 }
