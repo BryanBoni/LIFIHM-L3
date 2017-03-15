@@ -27,10 +27,17 @@
     <body>
         <br /><br />
         <div class="container-fluid">
+            <div id="banner" class="row" >
+                <div class="col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2 ">
+                    <center><a href="http://www.univ-lyon1.fr/"><img src="ressources/banner.png"/></a></center>
+                    <center class="hidden-xs"><h1 style="float: left;"> CAMPUS </h1><h1 style="float: right;">DATABASE</h1></center>
+                </div>
+            </div>
+
             <div class="col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
-                <center><h1> CAMPUS DATABASE</h1></center>
+
                 <div id="header">
-                    <nav class="navbar navbar-inverse">
+                    <nav class="navbar navbar-default">
                         <div class="container-fluid">
                             <!--Used after the TP1 -->
                             <div class="navbar-header">
@@ -45,8 +52,8 @@
 
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav navbar-right">
-                                    <li><a href="#cl">Création d'une liste</a></li>
-                                    <li><a href="#cf">Création d'un formulaire</a></li>
+                                    <li><a href="#list">Création d'une liste</a></li>
+                                    <li><a href="#formulaire_style">Création d'un formulaire</a></li>
 
                                 </ul>
                             </div>
@@ -54,13 +61,19 @@
                     </nav>
                 </div>
                 <div id="corps" class="col-sm-10 col-sm-offset-1">
-                    <h1 id="cl">Liste des salles du campus </h1>
-                    <center><div id="list" class="col-sm-10 col-sm-offset-1"></div></center>
+                    <h1 class="hidden-xs">Liste des salles du campus </h1>
+                    <center><h2 class="hidden-sm hidden-md hidden-lg">Liste des salles du campus </h2></center>
+                    
+                    <center class="row"><div id="list" class="col-sm-10 col-sm-offset-1"></div></center>
+                    
+                    
+                    
+                    <h1 class="hidden-xs">Ajout d'un élément dans la liste</h1>   <center><h2 class="hidden-sm hidden-md hidden-lg">Ajout d'un élément dans la liste</h2></center><!--used for mobile -->
+                    
                     <br />
-                    <h1 id="cf">Ajout d'un élément dans la liste</h1>
-                    <br />
+                    
                     <div id="formulaire_style">
-                        <center><i>(La complétion des champs comportant un astérisque <font color="red"> *</font> est obligatoire.)</i></center>
+                        <center><b><i>(La complétion des champs comportant un astérisque <font color="red"> *</font> est obligatoire.)</i></b></center>
                         <br />
                         <form id="formulaire" class="form-group">
                             <div class="row">
@@ -87,7 +100,7 @@
                     </div>
                 </div>
 
-                <div id="footer">Ce site web a été développé par Bryan Boni et Florian Ruelle, dans le cadre des projets d'IHM de la 3ième années de licence informatique</div>
+                <div id="footer" class="hidden-xs">Ce site web a été développé par <b>Bryan Boni</b> et <b>Florian Ruelle</b>, dans le cadre des projets d'IHM de la 3ième années de licence informatique.</div>
             </div>
         </div>
     </body>
