@@ -8,18 +8,18 @@ window.addEventListener("load", function () {
         var list = document.getElementById("list");
         var table = document.createElement("table");
         var danger = document.createElement("div");
-        var span1 = document.createElement("span"); 
+        var span1 = document.createElement("span");
         var span2 = document.createElement("span");
-        
+
         danger.setAttribute("class", "alert alert-danger");
         danger.setAttribute("role", "alert");
-        
+
         span1.setAttribute("class", "glyphicon glyphicon-exclamation-sign");
         span1.setAttribute("aria-hidden", "true");
 
         span2.setAttribute("class", "sr-only");
         span2.appendChild(document.createTextNode("Error:"));
-        
+
         danger.appendChild(span1);
         danger.appendChild(span2);
         danger.appendChild(document.createTextNode(" Veuillez remplir tous les champs avant d'ajouter une salles !"));
@@ -29,7 +29,7 @@ window.addEventListener("load", function () {
 
         add_element(list, table, "Nautibus", "C4", "Salle déjà réservée");//test row.
         document.getElementById("add_element").addEventListener("click", function () {
-            
+
             var values = document.getElementById("formulaire").getElementsByTagName("input");
             var i;
             var isGood = true;
@@ -65,6 +65,9 @@ window.addEventListener("load", function () {
     function add_element(list, table, batiment, salle, reservation) {
         var body = document.createElement("tbody");
         var tr = document.createElement("tr");
+        var td = document.createElement("td");
+        var td2 = document.createElement("td");
+        var td3 = document.createElement("td");
         var td_btn = document.createElement("td");
         var button = document.createElement("button");
         var txt_btn = document.createTextNode("X");
@@ -82,7 +85,55 @@ window.addEventListener("load", function () {
         button.appendChild(txt_btn);
         td_btn.appendChild(button);
 
-        tr.innerHTML = "<td>" + batiment + "</td> <td>" + salle + "</td> <td>" + reservation + "</td>";
+        td.addEventListener("click", function () {
+            batiment = prompt("veuillez choisir une nouvelle valeur.", batiment);
+            tr.removeChild(td);
+            tr.removeChild(td2);
+            tr.removeChild(td3);
+            tr.removeChild(td_btn);
+            td.innerHTML = batiment;
+            //td.appendChild(document.createTextNode(batiment));
+            tr.appendChild(td);
+            tr.appendChild(td2);
+            tr.appendChild(td3);
+            tr.appendChild(td_btn);
+        });
+        td.appendChild(document.createTextNode(batiment));
+        tr.appendChild(td);
+
+        td2.addEventListener("click", function () {
+            salle = prompt("veuillez choisir une nouvelle valeur.", salle);
+            tr.removeChild(td);
+            tr.removeChild(td2);
+            tr.removeChild(td3);
+            tr.removeChild(td_btn);
+            td2.innerHTML = salle;
+            //td2.appendChild(document.createTextNode(salle));
+            tr.appendChild(td);
+            tr.appendChild(td2);
+            tr.appendChild(td3);
+            tr.appendChild(td_btn);
+        });
+        td2.appendChild(document.createTextNode(salle));
+        tr.appendChild(td2);
+
+        td3.addEventListener("click", function () {
+            reservation = prompt("veuillez choisir une nouvelle valeur.", reservation);
+            tr.removeChild(td);
+            tr.removeChild(td2);
+            tr.removeChild(td3);
+            tr.removeChild(td_btn);
+            td3.innerHTML = reservation;
+           // td3.appendChild(document.createTextNode(reservation));
+            tr.appendChild(td);
+            tr.appendChild(td2);
+            tr.appendChild(td3);
+            tr.appendChild(td_btn);
+        });
+        td3.appendChild(document.createTextNode(reservation));
+        tr.appendChild(td3);
+
+        //tr.innerHTML = "<td>" + batiment + "</td> <td>" + salle + "</td> <td>" + reservation + "</td>";
 
         tr.appendChild(td_btn);
 
