@@ -70,6 +70,7 @@ h1{
     text-align: center;
 }
 
+/*
 #list{
     overflow: auto;
 
@@ -102,7 +103,7 @@ th{
     border: 1px solid white;
 }
 
-
+*/
 #input{
     padding-bottom: 10px;
 }
@@ -111,7 +112,6 @@ th{
     width:100%;
 
 }
-
 
 #formulaire_style{
     border-radius: 10px;
@@ -123,4 +123,35 @@ th{
 
 #formulaire label{
     font-size: 18px;
+}
+
+#thumbnail{
+    text-align: justify;
+    font-size: 16px;
+    background-color: #006666;
+    border: 3px #00cc99 solid;
+    border-radius: 10px;
+    padding: 10px;
+    /*margin: 1px;*/
+}
+
+#thumbnail b{
+    font-size: 18px;
+}
+
+#thumbnail div{
+    text-align: left;
+    border: 1px white solid;
+    padding: 5px;
+    padding-bottom: 20px;
+    background-color: #007F7F;
+    color: white;
+}
+
+#thumbnail div:hover{
+    cursor: pointer;
+}
+
+#thumbnail button{
+    width:100%;
 }
